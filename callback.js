@@ -14,41 +14,41 @@
 //callbackhell
 const details = ["name", "email", "password"];
 
-// function register(details, login) {
-//   console.log("User details", details);
-//   login(function () {
-//     success(function () {
-//       console.log("Successed");
-//     });
-//   });
-// }
-// function login(callabck) {
-//   setTimeout(function () {
-//     console.log("Login");
-//     callabck();
-//   }, 5000);
-// }
+function register(details, login) {
+  console.log("User details", details);
+  login(function () {
+    success(function () {
+      console.log("Successed");
+    });
+  });
+}
+function login(callabck) {
+  setTimeout(function () {
+    console.log("Login");
+    callabck();
+  }, 5000);
+}
 
-// function success(callback) {
-//   setTimeout(function () {
-//     callback();
-//   }, 0);
-// }
+function success(callback) {
+  setTimeout(function () {
+    callback();
+  }, 0);
+}
 
-// register(details, login);
+register(details, login);
 
-//promise
-// function register(details) {
-//   console.log("User details inside promise", details);
-//   return login
-//     .then(success)
-//     .then(function () {
-//       console.log("Success inside promise");
-//     })
-//     .catch(function (error) {
-//       console.log("Some error occurred:", error);
-//     });
-// }
+promise
+function register(details) {
+  console.log("User details inside promise", details);
+  return login
+    .then(success)
+    .then(function () {
+      console.log("Success inside promise");
+    })
+    .catch(function (error) {
+      console.log("Some error occurred:", error);
+    });
+}
 
 let login = new Promise(function (resolve, reject) {
   setTimeout(function () {
@@ -87,24 +87,24 @@ const p3 = () => {
   });
 };
 
-p1()
-  .then(() => {
-    console.log("inside p1");
-  })
-  .catch(() => {
-    console.log("error in p1");
-  })
-  .then(() => p2())
-  .then(() => {
-    console.log("inside p2");
-  })
-  .catch(() => {
-    console.log("error in p2");
-  })
-  .then(() => p3())
-  .then(() => {
-    console.log("inside p3");
-  })
-  .catch(() => {
-    console.log("error in p3");
-  });
+// p1()
+//   .then(() => {
+//     console.log("inside p1");
+//   })
+//   .catch(() => {
+//     console.log("error in p1");
+//   })
+//   .then(() => p2())
+//   .then(() => {
+//     console.log("inside p2");
+//   })
+//   .catch(() => {
+//     console.log("error in p2");
+//   })
+//   .then(() => p3())
+//   .then(() => {
+//     console.log("inside p3");
+//   })
+//   .catch(() => {
+//     console.log("error in p3");
+//   });
