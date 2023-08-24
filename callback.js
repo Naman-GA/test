@@ -50,21 +50,21 @@ const details = ["name", "email", "password"];
 //     });
 // }
 
-// let login = new Promise(function (resolve, reject) {
-//   setTimeout(function () {
-//     reject("hii");
-//     console.log("Login inside promise");
-//   }, 1);
-// });
+let login = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    reject("hii");
+    console.log("Login inside promise");
+  }, 1);
+});
 
-// let success = new Promise(function (resolve, reject) {
-//   setTimeout(function () {
-//     reject("eoor"); // Reject the Promise with an error message
-//   }, 9000);
-// });
+let success = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    reject("eoor"); // Reject the Promise with an error message
+  }, 9000);
+});
 
-// const userDetails = ["John Doe", "john@example.com", "pa$$w0rd"];
-// register(userDetails);
+const userDetails = ["John Doe", "john@example.com", "pa$$w0rd"];
+register(userDetails);
 
 const p1 = () => {
   return new Promise((resolve, reject) => {
